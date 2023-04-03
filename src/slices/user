@@ -1,0 +1,26 @@
+import { createSlice } from '@reduxjs/toolkit';
+// import {accountApi} from "../api/Account";
+import { useEffect } from "react";
+
+
+const slice = createSlice({
+    name: 'user',
+    initialState: {
+        user: null
+    },
+    reducers: {
+        fetchUser(state, action) {
+            state.user = action.payload;
+            // console.log('user changes', action.payload)
+        },
+
+    }
+});
+
+
+//user actions
+export const fetchUser = (user) => async (dispatch) => {
+    dispatch(slice.actions.fetchUser(user));
+};
+
+export const { reducer } = slice;
