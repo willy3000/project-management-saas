@@ -11,5 +11,6 @@ export const API_URL = {
 
     //Pojects
     CREATE_PROJECT: '/api/projects/createProject',
-    FECTH_PROJECTS: '/api/projects/getProjects'
+    FECTH_PROJECTS: '/api/projects/getProjects',
+    DELETE_PROJECT: '/api/projects/deleteProject'
 }

@@ -42,6 +42,23 @@ class ProjectsApi {
       }
     });
   }
+
+  async deleteProject(userId, projectId) {
+
+    return new Promise(async (resolve, reject) => {
+      try {
+        await axiosInstance.post(`${API_URL.DELETE_PROJECT}/${userId}/${projectId}`).then((res) => {
+          if (res.data.success) {
+            resolve(res.data.message);
+          } else {
+            reject(new Error(res.data.message));
+          }
+        });
+      } catch (err) {
+        reject(new Error(err.message));
+      }
+    });
+  }
 }
 
 export const projectsApi = new ProjectsApi();

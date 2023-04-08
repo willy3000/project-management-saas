@@ -16,7 +16,6 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Auth } from "@/api/Auth";
 import { toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from "next/router";
 import {fetchUser} from '../../../slices/user'
 import { useDispatch } from "react-redux";

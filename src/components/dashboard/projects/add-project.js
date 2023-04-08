@@ -35,6 +35,7 @@ export default function AddProject(props) {
       try {
         const data = await projectsApi.createProject(values, userId)
         dispatch(fetchProjects(userId))
+        onClose()
       } catch (err) {
         console.log(err);
       }
